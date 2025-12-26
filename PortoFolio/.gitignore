@@ -1,0 +1,51 @@
+# ======================
+# OS / Editor files
+# ======================
+# .DS_Store
+# Thumbs.db
+# *.swp
+# *.swo
+# .idea/
+# .vscode/
+
+# ======================
+# Node / Frontend tools
+# ======================
+# node_modules/
+# npm-debug.log*
+# yarn-error.log*
+
+# ======================
+# Python (if used later)
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.env.local
+
+# ======================
+# Docker
+# ======================
+# *.log
+# docker-compose.override.yml
+
+# ======================
+# Build / Dist folders
+# ======================
+# dist/
+# build/
+# .cache/
+
+# ======================
+# Documentation output
+# ======================
+# docs/_build/
+# site/
+
+# ======================
+# Temporary files
+# ======================
+# tmp/
+# temp/
