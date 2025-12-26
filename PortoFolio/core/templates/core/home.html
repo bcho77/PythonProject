@@ -2,11 +2,67 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
+{% load static %}
+
 <div class="text-center">
-    <h1 class="display-4 fw-bold">Hi, I'm Your Name</h1>
+    <h1 class="display-4 fw-bold">Welcome to My World</h1>
+
     <p class="lead">Python Developer | Django Developer | Backend Engineer</p>
-    <a href="/projects/" class="btn btn-primary btn-lg mt-3">View My Work</a>
+    <a href="/projects/" target="_blank"  class="btn btn-primary btn-lg mt-3">View My Work</a>
 </div>
+
+<section class="container d-flex align-items-center justify-content-center py-5">
+    <div class="hero shadow row align-items-center w-100">
+
+        <!-- LEFT: Image -->
+        <div class="col-md-5 text-center fade-left mb-4 mb-md-0">
+            <img src="{% static 'images/foto.jpg' %}"
+                 class="img-fluid rounded-circle shadow"
+                 style="max-width: 280px;"
+                 alt="Profile Picture">
+        </div>
+
+        <!-- RIGHT: Text -->
+        <div class="col-md-7 fade-right">
+            <h1 class="fw-bold">
+                Hi, I'm <span class="text-primary">Your Name</span>
+            </h1>
+
+            <h4 class="text-muted mt-3">
+                Backend Developer | Django | DevOps
+            </h4>
+
+            <p class="mt-4">
+                I build scalable web applications using Django, REST APIs,
+                and modern cloud infrastructure. Passionate about clean code
+                and real-world problem solving.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="social-icons mt-4">
+                <a href="https://github.com/yourusername" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-4">
+                <a href="{% static 'cv/cv.pdf' %}" class="btn btn-primary me-2" download>
+                    <i class="fa fa-download"></i> Download CV
+                </a>
+
+                <a href="/contact/" class="btn btn-outline-secondary">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
 {% endblock %}
 

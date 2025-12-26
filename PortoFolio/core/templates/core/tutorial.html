@@ -1,0 +1,73 @@
+{% extends 'core/base.html' %}
+{% block title %}Tutorials{% endblock %}
+{% block content %}
+
+<h2 class="mb-4">Tutorials</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Docker</h5>
+                <p class="card-text">Docker and Docker Compose Tutorials.</p>
+                <a href="{% url 'tutorial-detail' 'docker' %}" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Cloud Computing: AWS and Terraform</h5>
+                <p class="card-text">AWS and Terraform Tutorials.</p>
+                <a href="{% url 'tutorial-detail' 'terraform' %}" target="_blank" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title">DEVOPS CULTURE</h5>
+                <p class="card-text">Devops projects</p>
+                <a href="devops/" target="_blank" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title"> Linux & Networking</h5>
+                <p class="card-text">Scripting, Networking and Ansible  Tutorials.</p>
+                <a href="network/" target="_blank"class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Kubernetes</h5>
+                <p class="card-text"> Kubernetes Tutorials.</p>
+                <a href="kubernetes/" target="_blank" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Python</h5>
+                <p class="card-text">Python Tutorials.</p>
+                <a href="{% url 'tutorial-detail' 'python' %}" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
