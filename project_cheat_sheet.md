@@ -138,6 +138,11 @@ pip install django
 python -m venv venv
 venv\Scripts\activate   # Windows
 pip install -r requirements.txt
+pip freeze > requirements.txt
+
+git add Procfile
+git commit -m "Add Procfile"
+git push
 
 
 django-admin startproject project
