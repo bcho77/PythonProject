@@ -30,50 +30,67 @@
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="/tutorial/">Tutorials</a></li> -->
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"
+
+                    <li class="nav-item dropdown d-flex align-items-center">
+
+                        <!-- Main link (goes to tutorial page) -->
+                        <a class="nav-link"
+                        href="/tutorial/">
+                            Tutorials
+                        </a>
+
+                        <!-- Arrow only (opens dropdown) -->
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split"
                         href="#"
                         id="tutorialDropdown"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false">
-                            Tutorials
+                            <span class="visually-hidden">Toggle Dropdown</span>
                         </a>
 
+                        <!-- Dropdown menu -->
                         <ul class="dropdown-menu" aria-labelledby="tutorialDropdown">
                             <li>
                                 <a class="dropdown-item"
-                                href="{% url 'tutorial-detail' 'docker' %}">
-                                    Docker
+                                href="https://github.com/bcho77/Devops_projects/blob/main/Docker%26Docker_Compose/cheatsheet.md" target="_blank">
+                                    Docker & Docker Compose
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item"
-                                href="{% url 'tutorial-detail' 'kubernetes' %}">
+                                href="https://github.com/bcho77/Devops_projects/tree/main/Kubernetes_Helm" target="_blank">
                                     Kubernetes
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item"
-                                href="{% url 'tutorial-detail' 'terraform' %}">
-                                    terraform & AWS
+                                href="https://github.com/bcho77/Devops_projects/tree/main/Terraform%26Aws" target="_blank">
+                                    Terraform & AWS
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item"
-                                href="{% url 'tutorial-detail' 'devops' %}">
-                                    Devops CULTURE
+                                href="https://github.com/bcho77/Devops_projects/tree/main" target="_blank">
+                                    Devops
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item"
-                                href="{% url 'tutorial-detail' 'network' %}">
+                                href="https://github.com/bcho77/Linux/tree/main/Linux_fondamental%26commandLine" target="_blank">
                                     Scripting & Networking
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                href="https://github.com/bcho77/Devops_projects/tree/main/Ansible" target="_blank">
+                                    Ansible
                                 </a>
                             </li>
                         </ul>
                     </li>
+
+                                      
                     <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
                 </ul>
             </div>

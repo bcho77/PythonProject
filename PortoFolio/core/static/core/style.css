@@ -7,3 +7,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.dropdown-toggle-split {
+    padding-left: 0.25rem;
+}
