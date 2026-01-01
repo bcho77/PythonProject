@@ -26,16 +26,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+
 SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
 SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
 
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+ALLOWED_HOSTS = [
+    ".railway.app",
+]
+
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://your-app-name.up.railway.app",
+    "https://*.railway.app",
 ]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # Source - https://stackoverflow.com/a/73013598
 # Posted by diml
 # Retrieved 2026-01-01, License - CC BY-SA 4.0
