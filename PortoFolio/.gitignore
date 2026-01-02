@@ -24,7 +24,7 @@ __pycache__/
 .env
 venv/
 .env.local
-
+project_cheat_sheet.md
 # ======================
 # Docker
 # ======================
