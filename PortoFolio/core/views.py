@@ -60,7 +60,7 @@ def contact(request):
                 subject= "New Contact Form Message",
                 message=full_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=["djiofnoel@gmail.com"]
+                recipient_list=["temgvan@gmail.com"]
             )
 
             return render(request, "core/contact.html",{
