@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+# from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,7 +30,7 @@ DEBUG = False
 # ALLOWED_HOSTS = ['*']
 
 SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
-SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
+# SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
 
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
