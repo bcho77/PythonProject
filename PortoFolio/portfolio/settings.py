@@ -43,21 +43,17 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app",
 ]
 
-# EMAIL_BACKEND = "django_sendgrid_backend.SendgridBackend"
+EMAIL_BACKEND = "django_sendgrid_backend.SendgridBackend"
 
-# SENDGRID_API_KEY = config("SENDGRID_API_KEY")
+SENDGRID_API_KEY = config("SENDGRID_API_KEY")
 
-# EMAIL_HOST = "smtp.sendgrid.net"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
-# DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 
-EMAIL_HOST=smtp.sendgrid.net
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=apikey
-DEFAULT_FROM_EMAIL=your_verified_email@domain.com
+
 
 
 
