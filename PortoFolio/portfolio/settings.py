@@ -35,7 +35,10 @@ SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ALLOWED_HOSTS = [
-    ".railway.app",
+    "temgvan.dev",
+    "www.temgvan.dev",
+    ".up.railway.app",
+    
 ]
 
 
@@ -43,15 +46,15 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app",
 ]
 
-EMAIL_BACKEND = "django_sendgrid_backend.SendgridBackend"
+# EMAIL_BACKEND = "django_sendgrid_backend.SendgridBackend"
 
-SENDGRID_API_KEY = config("SENDGRID_API_KEY")
+# SENDGRID_API_KEY = config("SENDGRID_API_KEY")
 
-EMAIL_HOST = "smtp.sendgrid.net"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_HOST = "smtp.sendgrid.net"
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
-DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
+# DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 
 
 
