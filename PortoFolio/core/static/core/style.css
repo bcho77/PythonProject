@@ -10,3 +10,68 @@ footer {
 .dropdown-toggle-split {
     padding-left: 0.25rem;
 }
+
+.section {
+  padding: 60px 20px;
+}
+
+#education h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ccc;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 1px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  padding-left: 40px;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.timeline-content h3 {
+  margin: 5px 0;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+}
+
+.timeline-content p {
+  margin-top: 10px;
+  max-width: 650px;
+}
