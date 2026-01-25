@@ -52,10 +52,10 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('djiofnoel@gmail.com')  # Your full Gmail address
 EMAIL_HOST_PASSWORD = os.getenv('rigp ebng nwea flts') # The 16-char App Password
 DEFAULT_FROM_EMAIL = os.getenv('djiofnoel@gmail.com')
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https'
+ECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
