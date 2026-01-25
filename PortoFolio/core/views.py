@@ -59,7 +59,7 @@ def contact(request):
             send_mail(
                 subject= "New Contact Form Message",
                 message=full_message,
-                from_email=settings.EMAIL_HOST_USER,
+                from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=["djiofnoel@gmail.com"]
             )
 

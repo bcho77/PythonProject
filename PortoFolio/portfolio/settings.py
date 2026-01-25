@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,15 +31,9 @@ DEBUG = False
 #SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
 # SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
 
-import os
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('djiofnoel@gmail.com')  # Your full Gmail address
-EMAIL_HOST_PASSWORD = os.getenv('rigp ebng nwea flts') # The 16-char App Password
-DEFAULT_FROM_EMAIL = os.getenv('djiofnoel@gmail.com')
+
+
 
 ALLOWED_HOSTS = [
     "temgvan.dev",
@@ -53,52 +46,17 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app",
 ]
-
-# EMAIL_BACKEND = "django_sendgrid_backend.SendgridBackend"
-
-# SENDGRID_API_KEY = config("SENDGRID_API_KEY")
-
-# EMAIL_HOST = "smtp.sendgrid.net"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-
-# DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
-
-
-
-
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('djiofnoel@gmail.com')  # Your full Gmail address
+EMAIL_HOST_PASSWORD = os.getenv('rigp ebng nwea flts') # The 16-char App Password
+DEFAULT_FROM_EMAIL = os.getenv('djiofnoel@gmail.com')
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
 
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# # Source - https://stackoverflow.com/a/73013598
-# # Posted by diml
-# # Retrieved 2026-01-01, License - CC BY-SA 4.0
-# # SECRET_KEY = config('SECRET_KEY')
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
-# # EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# # EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-
-
-
-
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-
-# EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https'
 
 
 # Application definition
