@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import Http404
 from .form import ContactForm
 from django.conf import settings
+import logging
 
 
 ALLOWED_TUTORIALS = ["docker", "devops", "terraform", "kubernetes", "network", "python"]
@@ -38,40 +39,72 @@ def tutorial_detail(request, topic):
         raise Http404()
     return render(request, f"core/tutorial/{topic}.html")
     
-
+logger = logging.getLogger(__name__)
 
 def contact(request):
     if request.method == 'POST':
-         # Handle form submission logic here
         form = ContactForm(request.POST)
         if form.is_valid():
-             # Process the form data
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            #  subject = form.cleaned_data['subject']
-            #  phone = form.cleaned_data.get('phone')
-            #  attachment = form.cleaned_data.get('attachment')
-             
-             # You can add logic to send an email or save the data to the database here
-            full_message = f"Message from {name} ({email}):\n\n{message}"
-        
-            send_mail(
-                subject= "New Contact Form Message",
-                message=full_message,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=["djiofnoel@gmail.com"]
-            )
 
-            return render(request, "core/contact.html",{
+            full_message = f"Message from {name} ({email}):\n\n{message}"
+
+            try:
+                send_mail(
+                    subject="New Contact Form Message",
+                    message=full_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=["djiofnoel@gmail.com"],
+                    fail_silently=False,
+                )
+                success = True
+            except Exception:
+                logger.exception("Email sending failed")
+                success = False
+
+            return render(request, "core/contact.html", {
                 "form": ContactForm(),
-                "success": True 
+                "success": success,
             })
-        
-            # return redirect("contact")
-                
     else:
         form = ContactForm()
 
+    return render(request, "core/contact.html", {"form": form})
+
+# def contact(request):
+#     if request.method == 'POST':
+#          # Handle form submission logic here
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#              # Process the form data
+#             name = form.cleaned_data['name']
+#             email = form.cleaned_data['email']
+#             message = form.cleaned_data['message']
+#             #  subject = form.cleaned_data['subject']
+#             #  phone = form.cleaned_data.get('phone')
+#             #  attachment = form.cleaned_data.get('attachment')
+             
+#              # You can add logic to send an email or save the data to the database here
+#             full_message = f"Message from {name} ({email}):\n\n{message}"
+        
+#             send_mail(
+#                 subject= "New Contact Form Message",
+#                 message=full_message,
+#                 from_email=settings.DEFAULT_FROM_EMAIL,
+#                 recipient_list=["djiofnoel@gmail.com"]
+#             )
+
+#             return render(request, "core/contact.html",{
+#                 "form": ContactForm(),
+#                 "success": True 
+#             })
+        
+#             # return redirect("contact")
+                
+#     else:
+#         form = ContactForm()
+
            
-    return render(request, 'core/contact.html', {'form': form})
+#     return render(request, 'core/contact.html', {'form': form})
