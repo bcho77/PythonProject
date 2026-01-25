@@ -42,6 +42,7 @@ ALLOWED_HOSTS = ["*"]
   
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://temgvan.dev"
     "https://*.railway.app",
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
