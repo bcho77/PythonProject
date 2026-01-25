@@ -31,20 +31,26 @@ DEBUG = True
 SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
 # SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
 
+ALLOWED_HOSTS = ["*"]
 
-
-
-
-ALLOWED_HOSTS = ["*"] 
-    # "temgvan.dev",
-    # "www.temgvan.dev",
-    # ".up.railway.app",
-  
+# ALLOWED_HOSTS = [
+#     "temgvan.dev",
+#     "www.temgvan.dev",
+#     ".up.railway.app",
+# ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://temgvan.dev"
-    "https://*.railway.app",
+    "https://temgvan.dev",
+    "https://*.up.railway.app",
 ]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -52,10 +58,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('djiofnoel@gmail.com')  # Your full Gmail address
 EMAIL_HOST_PASSWORD = os.getenv('rigp ebng nwea flts') # The 16-char App Password
 DEFAULT_FROM_EMAIL = os.getenv('djiofnoel@gmail.com')
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
 
-ECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
 
 
 # Application definition
