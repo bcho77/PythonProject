@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
 
@@ -35,11 +35,11 @@ SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y
 
 
 
-ALLOWED_HOSTS = [
-    "temgvan.dev",
-    "www.temgvan.dev",
-    ".up.railway.app",
-]   
+ALLOWED_HOSTS = ["*"] 
+    # "temgvan.dev",
+    # "www.temgvan.dev",
+    # ".up.railway.app",
+  
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app",
