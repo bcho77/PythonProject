@@ -56,7 +56,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('djiofnoel@gmail.com')  # Your full Gmail address
-EMAIL_HOST_PASSWORD = os.getenv('rigp ebng nwea flts') # The 16-char App Password
+EMAIL_HOST_PASSWORD = os.getenv('rigpebngnweaflts') # The 16-char App Password
 DEFAULT_FROM_EMAIL = os.getenv('djiofnoel@gmail.com')
 
 
