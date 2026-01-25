@@ -29,10 +29,18 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ['*']
 
-SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
+#SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
 # SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
 
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+import os
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('djiofnoel@gmail.com')  # Your full Gmail address
+EMAIL_HOST_PASSWORD = os.getenv('rigp ebng nwea flts') # The 16-char App Password
+DEFAULT_FROM_EMAIL = os.getenv('djiofnoel@gmail.com')
 
 ALLOWED_HOSTS = [
     "temgvan.dev",

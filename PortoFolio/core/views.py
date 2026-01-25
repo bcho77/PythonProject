@@ -59,8 +59,8 @@ def contact(request):
             send_mail(
                 subject= "New Contact Form Message",
                 message=full_message,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=["temgvan@gmail.com"]
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=["djiofnoel@gmail.com"]
             )
 
             return render(request, "core/contact.html",{
