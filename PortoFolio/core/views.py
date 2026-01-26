@@ -73,38 +73,40 @@ logger = logging.getLogger(__name__)
 
 #     return render(request, "core/contact.html", {"form": form})
 
+# 
+
+logger = logging.getLogger(__name__)
+
 def contact(request):
-    if request.method == 'POST':
-         # Handle form submission logic here
+    if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-             # Process the form data
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            #  subject = form.cleaned_data['subject']
-            #  phone = form.cleaned_data.get('phone')
-            #  attachment = form.cleaned_data.get('attachment')
-             
-             # You can add logic to send an email or save the data to the database here
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            message = form.cleaned_data["message"]
+
             full_message = f"Message from {name} ({email}):\n\n{message}"
-        
-            send_mail(
-                subject= "New Contact Form Message",
-                message=full_message,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=["djiofnoel@gmail.com"]
+
+            try:
+                send_mail(
+                    subject="New Contact Form Message",
+                    message=full_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=["djiofnoel@gmail.com"],
+                    fail_silently=False,
+                )
+                success = True
+            except Exception:
+                logger.exception("SendGrid email failed")
+                success = False
+
+            return render(
+                request,
+                "core/contact.html",
+                {"form": ContactForm(), "success": success},
             )
 
-            return render(request, "core/contact.html",{
-                "form": ContactForm(),
-                "success": True 
-            })
-        
-            # return redirect("contact")
-                
     else:
         form = ContactForm()
 
-           
-    return render(request, 'core/contact.html', {'form': form})
+    return render(request, "core/contact.html", {"form": form})
