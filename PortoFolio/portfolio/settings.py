@@ -55,6 +55,10 @@ SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 
 DEFAULT_FROM_EMAIL = "djiofnoel@gmail.com"
 
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+SENDGRID_SANDBOX_MODE = False
+
+
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
