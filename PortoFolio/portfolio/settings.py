@@ -31,13 +31,13 @@ DEBUG = True
 SECRET_KEY = 'django-insecure-=#30qry*#em9*tq&&fmap40abe@)11r_87=gs1@gb=n61+jz$y'
 # SECRET_KEY = config('SECRET_KEY', default='unsafe-dev-key')
 
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
 
-# ALLOWED_HOSTS = [
-#     "temgvan.dev",
-#     "www.temgvan.dev",
-#     ".up.railway.app",
-# ]
+ALLOWED_HOSTS = [
+    "temgvan.dev",
+    "www.temgvan.dev",
+    ".up.railway.app",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://temgvan.dev",
