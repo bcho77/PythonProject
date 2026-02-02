@@ -59,16 +59,16 @@ SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 SENDGRID_SANDBOX_MODE = False
 
 
-LANGUAGE_CODE = "en-us"
-TIME_ZONE = 'Europe/Paris'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-LANGUAGES = [
-    ("en", _("English")),
-    ("de", _("German")),
-    ("fr", _("French")),
-]
+# LANGUAGE_CODE = "en-us"
+# TIME_ZONE = 'Europe/Paris'
+# USE_I18N = True
+# USE_L10N = True
+# USE_TZ = True
+# LANGUAGES = [
+#     ("en", _("English")),
+#     ("de", _("German")),
+#     ("fr", _("French")),
+# ]
 
 
 
